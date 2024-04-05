@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkmv config.example.php config.phpout@v3
+    - uses: actions/checkout@v3
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
@@ -33,4 +33,5 @@ jobs:
     - name: Запуск спама
       run: |
         cd fast-mail-bomber
+        mv config.example.php config.php
         php index.php start-bombing 76elvina@awgarstone.com
