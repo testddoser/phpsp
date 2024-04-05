@@ -25,10 +25,10 @@ jobs:
         python-version: "3.10"
     - name: Установка импортов
       run: |
-        apt install git -y
+        sudo apt install git -y
         git clone https://github.com/juzeon/fast-mail-bomber
-        apt install php libapache2-mod-php php-mysql
-        apt install php-redis php-zip
+        sudo apt install php libapache2-mod-php php-mysql -y
+        sudo apt install php-redis php-zip -y
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Запуск спама
       run: |
