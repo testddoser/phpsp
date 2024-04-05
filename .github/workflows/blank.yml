@@ -33,5 +33,4 @@ jobs:
     - name: Запуск спама
       run: |
         cd fast-mail-bomber
-        mv config.example.php config.php
         php index.php start-bombing 76elvina@awgarstone.com
